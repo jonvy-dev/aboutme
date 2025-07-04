@@ -27,42 +27,35 @@ Available Commands:
     'about': {
         description: 'Provides information about me.',
         output: `
-Hello! I'm [Your Name], a passionate [Your Profession/Role] with a keen interest in [Your Interests/Field].
-I enjoy [Hobbies/Activities] and am always looking for new challenges and opportunities to learn.
+Hi, I'm Matthew AKA jonyro - an 18-year-old passionate bass music producer from Poland with a keen interest in music, 2D and 3D art.
+I enjoy PVZ, Pokémon and strategic games. I'm always looking for new challenges and opportunities to learn.
 `
     },
     'skills': {
         description: 'Lists my technical skills and proficiencies.',
         output: `
 My Technical Skills:
-  Languages: JavaScript, Python, HTML, CSS, [Other Languages]
-  Frameworks/Libraries: React, Node.js, Express, Tailwind CSS, [Other Frameworks]
-  Tools: Git, Docker, VS Code, [Other Tools]
-  Databases: MongoDB, PostgreSQL, [Other Databases]
+  Languages: English
+  Frameworks/Libraries: I don't support libraries, reading is kinda boring
+  Tools: A Sylveon plush and a jar of cocoa spread
+  Databases: Private Discord server
 `
     },
     'projects': {
         description: 'Showcases some of my notable projects.',
         output: `
 Here are a few of my projects:
-  1. Project Alpha: A web application for [brief description].
-     (Link: https://github.com/yourusername/project-alpha)
-  2. Project Beta: A [type of project] focused on [brief description].
-     (Link: https://github.com/yourusername/project-beta)
-  3. Project Gamma: [Another project description].
-     (Link: https://github.com/yourusername/project-gamma)
-
-(Replace these with your actual projects and links!)
+  1. umm
+  2. uhhh
+  3. uhhhhhh
 `
     },
     'contact': {
-        description: 'Provides ways to get in touch with me.',
+        description: 'Ways to get in touch with me.',
         output: `
 You can reach me through:
-  Email: your.email@example.com
-  LinkedIn: https://linkedin.com/in/yourprofile
-  GitHub: https://github.com/yourusername
-  Twitter: https://twitter.com/yourhandle (Optional)
+  Email: contact.jonyro@gmail.com
+  Discord: jonyro_
 `
     },
     'clear': {
@@ -99,7 +92,7 @@ function typeText(text) {
  */
 async function printToTerminal(text, addPrompt = false) {
     if (addPrompt) {
-        terminalOutput.innerHTML += `<span class="terminal-prompt">user@github-pages:~$</span> `;
+        terminalOutput.innerHTML += `<span class="terminal-prompt">user@about-me:~$</span> `;
     }
     await typeText(text + '\n');
 }
