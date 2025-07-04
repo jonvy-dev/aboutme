@@ -1,0 +1,154 @@
+/* Custom CSS for the terminal look and feel */
+body {
+    background-color: #1a202c; /* Dark background */
+    font-family: 'Inter', monospace; /* Monospace font for terminal feel */
+    color: #00ff00; /* Green text for terminal output */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.terminal-container {
+    background-color: #000; /* Black background for the terminal window */
+    border: 1px solid #00ff00; /* Green border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Green glow effect */
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Max width for larger screens */
+    height: 70vh; /* Responsive height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.terminal-header {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.terminal-header .buttons span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.terminal-header .buttons .close { background-color: #ff5f56; }
+.terminal-header .buttons .minimize { background-color: #ffbd2e; }
+.terminal-header .buttons .maximize { background-color: #27c93f; }
+
+
+.terminal-output {
+    flex-grow: 1;
+    padding: 16px;
+    overflow-y: auto; /* Scrollable output area */
+    font-size: 1em;
+    line-height: 1.5;
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    word-break: break-word; /* Break long words */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #00ff00 #333; /* Thumb and track color */
+}
+
+/* Webkit scrollbar styles */
+.terminal-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 4px;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+    background-color: #00ff00;
+    border-radius: 4px;
+    border: 2px solid #333;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-top: 1px solid #00ff00;
+}
+
+.terminal-prompt {
+    color: #00ff00;
+    margin-right: 8px;
+    user-select: none; /* Prevent selection of prompt */
+}
+
+.terminal-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #00ff00;
+    flex-grow: 1;
+    font-size: 1em;
+    caret-color: #00ff00; /* Green cursor */
+    padding: 0;
+    margin: 0;
+}
+
+/* Typing effect cursor */
+.typing-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1em;
+    background-color: #00ff00;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { background-color: transparent; }
+    50% { background-color: #00ff00; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .terminal-container {
+        width: 95%;
+        height: 80vh;
+    }
+    .terminal-output, .terminal-input {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal-container {
+        width: 98%;
+        height: 90vh;
+        border-radius: 4px;
+    }
+    .terminal-header {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    .terminal-header .buttons span {
+        width: 10px;
+        height: 10px;
+        margin-right: 4px;
+    }
+    .terminal-output, .terminal-input {
+        font-size: 0.8em;
+        padding: 12px;
+    }
+    .terminal-input-line {
+        padding: 6px 12px;
+    }
+}
