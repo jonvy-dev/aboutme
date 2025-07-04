@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Terminal Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <div class="title">user@github-pages:~$</div>
+            <div class="controls"></div>
+        </div>
+        <div class="terminal-output" id="terminalOutput">
+            </div>
+        <div class="terminal-input-line">
+            <span class="terminal-prompt">user@github-pages:~$</span>
+            <input type="text" class="terminal-input" id="terminalInput" autofocus autocomplete="off" spellcheck="false">
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
